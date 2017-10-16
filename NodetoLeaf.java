@@ -1,4 +1,8 @@
-StringBuffer res=new StringBuffer("");//globally declared
+/* Considering a tree who's structure is defined as
+	node
+       /    \
+     left   right */
+StringBuffer res=new StringBuffer("");//globally declared string to store the path
 String initializePath(Node node, int sum)
 {
 	boolean b=path(node, sum);
@@ -17,7 +21,7 @@ boolean path(Node node, int sum)
 		int sumgot;
 		boolean found=false;
 		sumgot=sum-node.value;
-		if(subgot==0 && node.left==null && node.right==null)
+		if(subgot==0 && node.left==null && node.right==null)//if a leaf is found
 		{
 			res=res+String.valueOf(node.value)+"<-"
 			return true;
