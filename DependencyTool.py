@@ -7,12 +7,14 @@ with open(file) as f
 if 'Dependencies' in readData:#Looking for presence of dependencies in the JSON file
 	count=0
 	notinstalled []#array to store the names of the dependencies not installed
-	for each in readData:
-		line=str(each)#reading each data in the JSON file
+	for each in readData['Dependencies']:
+		first=str(each)
+		last=str(readData['Dependencies'][each])
+		line=first+"=="+last
 		ins=pip.main(['install',line])
 		if ins!=0#That is an error has occured during installation 
 			count=1
-			notinstalled.append(str(each))#dependencies found is added to the array
+			notinstalled.append(str(each)+":"+str(readData['Dependencies'][each]))#dependencies found is added to the array
 	if count==1:#Hence atleast 1 uninstalled dependency is found 
 		print('The following is the list of not installed dependencies')
 		for c in notinstalled:
