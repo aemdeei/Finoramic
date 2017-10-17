@@ -5,7 +5,7 @@ public class Solution
 	    return (int)bigpow(x, n, d);//new function as long value is needed
 	}
 	public long bigpow(long x,long n,long d)
-    {
+    	{
         long r;
         if(d==1)
 	    {
@@ -35,11 +35,11 @@ public class Solution
 	        }
 	    }
 	    if(r<0)//result is negative
-        {
+            {
             r=d+r;
-        }
-			return r;
-    }
+            }
+		return r;
+    	}
 }
 
 
