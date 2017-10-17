@@ -1,5 +1,5 @@
 # Finoramic
-Solved problems in Java
+Solved problems
 
 This repository contains the problems given to me with the following names:
   1. Soduku.java - Soduku problem from InterviewBit
