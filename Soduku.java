@@ -41,12 +41,13 @@ public class Solution
 	            b.add(c);
 	        }
 	    }
+		//checking in each sub-box
 	    for(int k=0;k<9;k++)
 	    {
 	        int start=k/3;
 	        int end=k%3;
 	        b.clear();
-	        for(int i=(3*start);i<(3*start)+3;i++)
+	        for(int i=(3*start);i<(3*start)+3;i++)//as each sub-box will only contain 3 elements
 	        {
 	            for(int j=(3*end);j<(3*end)+3;j++)
 	            {
